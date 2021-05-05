@@ -18,7 +18,7 @@ phases:
       - mvn test -f pom.xml -fn
 artifacts:
   files:
-    - SourceArti/hello-docker-0.0.1.jar
+    - codepipeline-us-east-1-433182285662/Hello-Docker/hello-docker-0.0.1.jar
     - echo Artifacts uploading completed on `date`
 cache:
   paths:
@@ -27,7 +27,7 @@ reports: #New
   SurefireReports: # CodeBuild will create a report group called "SurefireReports".
     files: #Store all of the files
       - '**/*'
-    base-directory: 'SourceArti/surefire-reports' # Location of the reports
+    base-directory: 'codepipeline-us-east-1-433182285662/Hello-Docker/surefire-reports' # Location of the reports
   #jacoco-report:
    # files:
     #  - '**/*' 
