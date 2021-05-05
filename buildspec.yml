@@ -20,9 +20,9 @@ artifacts:
   files:
     - target/*
     - echo Artifacts uploading completed on `date`
-#cache:
- # paths:
-  #  - '/root/.m2/**/*'
+cache:
+  paths:
+    - '/root/.m2/**/*'
 #reports: #New
  # SurefireReports: # CodeBuild will create a report group called "SurefireReports".
   #  files: #Store all of the files
