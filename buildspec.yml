@@ -20,14 +20,15 @@ artifacts:
   files:
     - target/hello-docker-0.1.jar
     - echo Artifacts uploading completed on `date`
-cache:
-  paths:
-    - '/root/.m2/**/*'
-reports: #New
-  SurefireReports: # CodeBuild will create a report group called "SurefireReports".
-    files: #Store all of the files
-      - '**/*'
-    base-directory: 'target/surefire-reports' # Location of the reports
+  discard-paths: yes
+#cache:
+ # paths:
+  #  - '/root/.m2/**/*'
+#reports: #New
+  #SurefireReports: # CodeBuild will create a report group called "SurefireReports".
+#    files: #Store all of the files
+ #     - '**/*'
+  #  base-directory: 'target/surefire-reports' # Location of the reports
   #jacoco-report:
    # files:
    #   - '**/*' 
