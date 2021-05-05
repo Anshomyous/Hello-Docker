@@ -18,7 +18,7 @@ phases:
       - mvn test -f pom.xml -fn
 artifacts:
   files:
-    - target/hello-docker-0.1.jar
+    - target/hello-docker-0.0.1.jar
     - echo Artifacts uploading completed on `date`
   discard-paths: yes
 #cache:
