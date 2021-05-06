@@ -22,15 +22,15 @@ reports: #New
     files: #Store all of the files
       - '**/*'
     base-directory: 'target/surefire-reports' # Location of the reports
-  jacoco-report:
-    files:
-      - '**/*' 
-    base-directory: 'target/site/jacoco'
-    file-format: 'JACOCOXML'
+#  jacoco-report:
+ #   files:
+  #    - '**/*' 
+   # base-directory: 'target/site/jacoco'
+    #file-format: 'JACOCOXML'
    arn:aws:codebuild:ap-south-1:516804113156:report-group/test-report-group-code-coverage:
      files:
        - '**/*'
-     #base-directory: 'target/simplecov-reports' # Location of the reports
+     base-directory: 'target/simplecov-reports' # Location of the reports
      files:
       - '**/*'
      file-format: 'SIMPLECOV'
