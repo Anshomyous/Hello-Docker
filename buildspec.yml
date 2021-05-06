@@ -16,6 +16,13 @@ phases:
       - echo Build completed on `date`
       - mvn surefire-report:report #Running this task to execute unit tests and generate report.
       - mvn test -f pom.xml -fn
+  artifacts:
+    files:
+      - target/*
+      - echo Artifacts uploading completed on `date`
+  cache:
+  paths:
+    - '/root/.m2/**/*'
 
 reports: #New
   SurefireReports: # CodeBuild will create a report group called "SurefireReports".
@@ -34,10 +41,3 @@ reports: #New
      files:
       - '**/*'
      file-format: 'SIMPLECOV'
-artifacts:
-  files:
-    - target/*
-    - echo Artifacts uploading completed on `date`
-cache:
-  paths:
-    - '/root/.m2/**/*'
