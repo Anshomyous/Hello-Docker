@@ -34,6 +34,8 @@ reports: #New
 artifacts:
   files:
     - target/*
+    - target/surefile-reports
+    - target/site/jacoco
     - echo Artifacts uploading completed on `date`
   # arn:aws:codebuild:ap-south-1:516804113156:report-group/test-report-group-code-coverage:
   #   files:
