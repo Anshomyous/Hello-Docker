@@ -109,10 +109,10 @@
 		</plugins>
 	</build>
 	<distributionManagement>
-		<repository>
-			<id>zyter--telehealth</id>
-			<name>zyter--telehealth</name>
-			<url>https://zyter-516804113156.d.codeartifact.ap-south-1.amazonaws.com/maven/telehealth/</url>
-		</repository>
-	</distributionManagement>
+  <repository>
+    <id>hellodocker-hello-docker-repo</id>
+    <name>hellodocker-hello-docker-repo</name>
+    <url>https://hellodocker-113913361709.d.codeartifact.us-east-1.amazonaws.com/maven/hello-docker-repo/</url>
+  </repository>
+</distributionManagement>
 </project>
