@@ -21,7 +21,7 @@ phases:
 cache:
   paths:
     - '/root/.m2/**/*'
-    - '/root/repository/**/*'
+    #- '/root/repository/**/*'
     - 'build/**/*'
 reports: #New
   SurefireReports: # CodeBuild will create a report group called "SurefireReports".1
