@@ -24,7 +24,7 @@ cache:
     - '/root/repository/**/*'
     - 'build/**/*'
 reports: #New
-  SurefireReports: # CodeBuild will create a report group called "SurefireReports".
+  SurefireReports: # CodeBuild will create a report group called "SurefireReports".1
     files: #Store all of the files
       - '**/*'
     base-directory: 'target/surefire-reports' # Location of the reports
