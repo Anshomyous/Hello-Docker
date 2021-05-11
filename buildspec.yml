@@ -6,7 +6,7 @@ phases:
       java: corretto11
   pre_build:
     commands:
-     # - echo Nothing to do in the pre_build phase...
+      - echo Nothing to do in the pre_build phase...
       - pip3 install awscli --upgrade --user
       - export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain hellodocker --domain-owner 113913361709 --query authorizationToken --output text`
       - mvn --no-transfer-progress -s settings.xml clean package
