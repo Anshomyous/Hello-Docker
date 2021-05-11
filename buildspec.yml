@@ -14,7 +14,7 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - mvn --no-transfer-progress -s settings.xml clean install
+      - mvn  -s settings.xml clean install
       
   post_build:
     commands:
