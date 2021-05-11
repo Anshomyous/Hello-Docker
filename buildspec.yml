@@ -9,6 +9,7 @@ phases:
       - echo Nothing to do in the pre_build phase...
       - pip3 install awscli --upgrade --user
       - export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain hellodocker --domain-owner 113913361709 --query authorizationToken --output text`
+      - mvn --no-transfer-progress -s settings.xml clean package
   build:
     commands:
       - echo Build started on `date`
@@ -23,8 +24,6 @@ phases:
 cache:
   paths:
     - '/root/.m2/**/*'
-   # - '/root/repository/**/*'
-    - 'build/**/*'
 reports: #New
   SurefireReports: # CodeBuild will create a report group called "SurefireReports".1
     files: #Store all of the files
