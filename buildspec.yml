@@ -9,11 +9,11 @@ phases:
      # - echo Nothing to do in the pre_build phase...
       - pip3 install awscli --upgrade --user
       - export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain hellodocker --domain-owner 113913361709 --query authorizationToken --output text`
-      - mvn --no-transfer-progress -s settings.xml clean package
+      
   build:
     commands:
       - echo Build started on `date`
-      - mvn clean install
+      - mvn --no-transfer-progress -s settings.xml clean package
       
   post_build:
     commands:
